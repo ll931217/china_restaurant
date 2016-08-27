@@ -1,0 +1,85 @@
+mixin images(...names)
+  each name in names
+    .item
+      img(src= name).img-responsive
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="author", content="Liang-Shih Lin")
+    meta(name="keywords", content="Kimberley, South Africa, China, Restaurant, Food, Wen-Ching Ho, Du Toit Span Road, Du Toit Span, Du Toit, Chinese, Chinese Food, Chinese Cuisine, Asian Fusion, Chinese, Seafood, Singaporean, Taiwanese, Vegetarian")
+    title China Restaurant
+    base(href="/china_restaurant_2/public/")
+
+    link(rel="shortcut icon", href="images/logo.ico")
+    link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat")
+    link(rel="stylesheet", type="text/css", href="css/bootstrap.css")
+    link(rel="stylesheet", type="text/css", href="css/styles.css")
+
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(type="text/javascript", src="js/bootstrap.js")
+  body
+    #fb-root
+    script(type="text/javascript").
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button(type="button", data-toggle="collapse", data-target="#navbar-links", aria-expanded="false").navbar-toggle.collapsed
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href="#").navbar-brand
+            img(src="images/logo.png", alt="China Restaurant Logo")
+
+        .collapse.navbar-collapse#navbar-links
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="") Home
+            li
+              a(href="gallery") Gallery
+            li
+              a(href="reviews") Reviews
+            li.active
+              a(href="about/#") #[span.glyphicon.glyphicon-info-sign] About Us
+            li
+              a(href="contact") Contact Us
+    .container-fluid
+      .row.main-body
+        .col-md-offset-3.col-md-6.content
+          .row
+            .col-md-12
+              .outer
+                .inner
+                  .row
+                    .col-md-12
+                      h1 More About Us
+                      hr
+                  .row
+                    .col-md-12
+                      img(src="images/res.jpg", alt="Front of Restaurant").img-responsive
+                      hr
+                  .row
+                    .col-md-12
+                      p In Kimberley there is a Chinese Restaurant which opened in 1994, this was after Wen-Ching (The Restaurant owner) closed down a gadget store and opened a China Restaurant. China Restaurant was the only Asian restaurant in Kimberley until 2014 when more Asians moved to Kimberley and opened up more restaurants. The restaurant only sells traditional Asian food, with recipes that are taken from Taiwan. The restaurant is run by a couple named, Wen-Ching Ho, and Huei-Mei Hsieh. Wen-Ching is in charge of the customers, he waiters, in charge of the cashier, answers the phone and stocks up the restaurant whenever it needs something. Huei-Mei is in charge of the kitchen and the kitchen staff, whenever there is a new kitchen staff she needs to train them and she is also a replacement for Wen-Ching if he is out on an errand. There have been many customers from all over the world who have tried the food at this restaurant, and many of them really enjoy it. If you ever come by Kimberley, please come have a look.
+
+      .row.footer
+        .col-md-12
+          .row
+            .col-md-6
+              p Photos Done by #[a(href="https://www.facebook.com/KharlaRosePhotography/") Kharla Rose Photography] #[br] Website designed and developed by #[a(href="https://za.linkedin.com/in/ll931217", target="_blank") Liang-Shih Lin]
+            .col-md-6.text-right
+              div(data-href="https://www.facebook.com/KharlaRosePhotography/", data-layout="button_count", data-show-faces="false").fb-follow
+              p &copy; Copyright 2016 China Restaurant Inc. All Rights Reserved.

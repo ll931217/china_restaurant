@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Liang-Shih Lin">
+  <meta name="keywords" content="Kimberley, South Africa, China, Restaurant, Food, Wen-Ching Ho, Du Toit Span Road, Du Toit Span, Du Toit, Chinese, Chinese Food, Chinese Cuisine, Asian Fusion, Chinese, Seafood, Singaporean, Taiwanese, Vegetarian">
+  <title>China Restaurant</title>
+  <base href="/china_restaurant_2/public/">
+  <link rel="shortcut icon" href="images/logo.ico">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/unslider.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/unslider.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/openTime.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.my-slider').unslider({
+        autoplay: true,
+        keys: false,
+        arrows: false,
+        nav: false,
+        infinite: true
+      });
+    
+      if($(window).width() < 990) {
+        $('.main-side').insertAfter('.content');
+      } else {
+        $('.main-side').insertBefore('.content');
+      }
+    });
+    
+    $(window).on('resize', function() {
+      if($(window).width() < 990) {
+        $('.main-side').insertAfter('.content');
+      } else {
+        $('.main-side').insertBefore('.content');
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script type="text/javascript">
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="China Restaurant Logo">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+          </li>
+          <li><a href="gallery">Gallery</a>
+          </li>
+          <li><a href="reviews">Reviews</a>
+          </li>
+          <li><a href="about">About Us</a>
+          </li>
+          <li><a href="contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row main-body">
+      <div class="col-md-3 main-side">
+        <div class="outer">
+          <div class="inner">
+            <h3><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> New Dish!</h3>
+            <br>
+            <div class="zoomTarget">
+              <img class="img-responsive" src="images/gallery/16.jpg" alt="Deep Fried Chicken Steak">
+            </div>
+            <br>
+          </div>
+          <div class="inner">
+            <h3><span class="glyphicon glyphicon-list-alt"></span> Menus</h3>
+            <p><a href="pdf/mainMenu.pdf" target="_blank">Main Menu</a>
+              <p>-- All the delicious food you find on the take-out menu will be here in the main menu</p><a href="pdf/setMenu.pdf" target="_blank">Set Menu</a>
+              <p>-- Want to come here with your friends, family or with someone special? *wink* *wink*. Take a look at this menu</p><a href="pdf/drinks.pdf" target="_blank">Drinks</a>
+              <p>-- Feeling thirsty or want to try some eastern alcohol? This is the menu for you!</p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="outer">
+              <div class="inner"><span id="open"></span>
+                <script type="text/javascript">
+                  window.onload = open('open');
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="outer">
+              <div class="slide inner">
+                <div class="my-slider">
+                  <ul>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_1.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_2.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_3.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_4.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_5.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_6.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_7.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_8.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_9.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_10.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_12.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_13.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_14.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_15.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_16.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_17.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_18.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_19.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_20.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_21.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_22.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_23.jpg" />
+                    </li>
+                    <li>
+                      <img class="img-responsive" src="images/home/DSC_1_25.jpg" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 home-about">
+            <div class="outer">
+              <div class="inner">
+                <h1>A Little About Us</h1>
+                <p>China Restaurant was established in 1994, after Wen-Ching Ho (The owner of the restaurant) closed down a gadget shop that he used to run. China Restaurant was the only Asian restaurant in Kimberley until 2014 when more Asians moved to
+                  Kimberley and opened up more restaurants. The restaurant only sells traditional Asian food, with recipe that are taken from Taiwan. The restaurant is run by...</p><a href="china_restaurant_2/public/about">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 home-comments">
+            <div class="outer">
+              <div class="inner">
+                <h1>Some Comments from Our Customers</h1>
+                <blockquote>
+                  <p>I've moved to Bloemfontein & went eating Chinese and nobody there beat you guys! Went there on Thursday night again!</p>
+                  <footer>Melissa du Plessis</footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 other-side">
+        <div class="outer">
+          <div class="inner">
+            <h3><span class="glyphicon glyphicon-time"></span> Operating Hours</h3>
+            <p><span class="operate">Mondays - Saturdays:</span>
+              <p>11:30 - 14:00</p>
+              <p>17:30 - 21:30</p>
+            </p>
+            <hr align="center">
+            <p><span class="operate">Sundays:</span>
+              <p><span style="color: red">CLOSED</span>
+              </p>
+            </p>
+          </div>
+          <div class="inner">
+            <h3><span class="glyphicon glyphicon-earphone"></span> How to get hold of us</h3>
+            <p><span class="operate">Mr Delivery</span>
+              <br><a href="tel:0861858591" style="font-size: 14px">(086) 185-8591</a>
+              <br>Tel:<a href="tel:0538314444" style="font-size: 14px">(053) 831-4444</a>
+              <br>Cell:<a href="tel:0027826719787" style="font-size: 14px">+ (27) 826719787</a>
+              <br>Location:
+              <br>
+              <br>
+              <iframe class="maps" allowfullscreen="" frameborder="0" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.1995800991526!2d24.768632115717597!3d-28.74345757894708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9b1bafab1ce9dd%3A0xe18a37d07e8d1ebb!2s147+Du+Toitspan+Rd%2C+Kimberley%2C+8301!5e0!3m2!1sen!2sza!4v1460017968018"
+              style="border: 0"></iframe>
+              <br>
+            </p>
+          </div>
+          <div class="inner">
+            <div class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/chinarestaurantkby/" data-show-facepile="true" data-small-header="true" data-tabs="timeline" data-width="400">
+              <div class="fb-xfbml-parse-ignore">
+                <blockquote cite="https://www.facebook.com/chinarestaurantkby/"><a href="https://www.facebook.com/chinarestaurantkby/" target="_blank">China Restaurant Kimberley</a>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Photos Done by <a href="https://www.facebook.com/KharlaRosePhotography/">Kharla Rose Photography</a> 
+              <br>Website designed and developed by <a href="https://za.linkedin.com/in/ll931217" target="_blank">Liang-Shih Lin</a>
+            </p>
+          </div>
+          <div class="col-md-6 text-right">
+            <div class="fb-follow" data-href="https://www.facebook.com/KharlaRosePhotography/" data-layout="button_count" data-show-faces="false"></div>
+            <p>&copy; Copyright 2016 China Restaurant Inc. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

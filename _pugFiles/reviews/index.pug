@@ -1,0 +1,140 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="author", content="Liang-Shih Lin")
+    meta(name="keywords", content="Kimberley, South Africa, China, Restaurant, Food, Wen-Ching Ho, Du Toit Span Road, Du Toit Span, Du Toit, Chinese, Chinese Food, Chinese Cuisine, Asian Fusion, Chinese, Seafood, Singaporean, Taiwanese, Vegetarian")
+    title China Restaurant
+    base(href="/china_restaurant_2/public/")
+
+    link(rel="shortcut icon", href="images/logo.ico")
+    link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat")
+    link(rel="stylesheet", type="text/css", href="css/bootstrap.css")
+    link(rel="stylesheet", type="text/css", href="css/star-rating.min.css")
+    link(rel="stylesheet", type="text/css", href="css/styles.css")
+
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(type="text/javascript", src="js/bootstrap.js")
+    script(type="text/javascript", src="js/star-rating.min.js")
+    script(type="text/javascript").
+      $(document).ready(function() {
+        $.getJSON('controls/getReviews.php', function(jsondata) {
+          console.log("Returned data: " + jsondata);
+          if (jsondata !== "") {
+            for (var i = 0; i < jsondata.length; i++) {
+              var data = jsondata[i];
+              var fname = data["fname"];
+              var lname = data["lname"];
+              var email = data["email"];
+              var gender = data["gender"];
+              var title = data["title"];
+              var msg = data["content"];
+              var rating = data["rating"];
+              $('.reviews').append('<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + title + '</h3></div><div class="panel-body"><table class="table table-striped"><tr><td>Name:</td><td>' + fname + ' ' + lname + '</td></tr><tr><td>Gender:</td><td>' + gender + '</td></tr><tr><td>Rating:</td><td>' + rating + '/5</td></tr><tr><td>Message:</td><td>' + msg + '</td></tr></table></div></div>');
+            }
+          }
+        });
+      });
+  body
+    #fb-root
+    script(type="text/javascript").
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button(type="button", data-toggle="collapse", data-target="#navbar-links", aria-expanded="false").navbar-toggle.collapsed
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href="#").navbar-brand
+            img(src="images/logo.png", alt="China Restaurant Logo")
+
+        .collapse.navbar-collapse#navbar-links
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="") Home
+            li
+              a(href="gallery") Gallery
+            li.active
+              a(href="reviews/#") #[span.glyphicon.glyphicon-pencil] Reviews
+            li
+              a(href="about") About Us
+            li
+              a(href="contact") Contact Us
+    .container-fluid
+      .row.main-body
+        .col-md-offset-3.col-md-6.content
+          .row
+            .col-md-12
+              .outer
+                .inner
+                  .row
+                    .col-md-9
+                      h1 What our customers think of us
+                    .col-md-3
+                      br
+                      button(type="button", data-toggle="collapse", data-target="#postReview").btn.btn-success.pull-right #[span.caret] Post a Review
+                  hr
+                  .row#postReview.collapse
+                    .col-md-12
+                      form(method="post", action="controls/post.php").form-horizontal
+                        .form-group
+                          label(for="inputFName").col-md-2.control-label First Name:
+                          .col-md-4
+                            input(type="text", name="fname", placeholder="Jack", required).form-control
+                          label(for="inputLName").col-md-2.control-label Last Name:
+                          .col-md-4
+                            input(type="text", name="lname", placeholder="Sparrow", required).form-control
+                        .form-group
+                          label(for="selectGender").col-md-2.control-label Gender:
+                          .col-md-4
+                            .radio
+                              label
+                                input(type="radio", id="selectGender", name="gender", value="male", required)
+                                | Male
+                            .radio
+                              label
+                                input(type="radio", id="selectGender", name="gender", value="female", required)
+                                | Female
+                          label(for="inputEmail").col-md-2.control-label Email:
+                          .col-md-4
+                            input(type="email", name="email", placeholder="jack.sparrow123@gmail.com", required).form-control
+                        .form-group
+                          label(for="inputReviewTitle").col-md-2.control-label Review Title:
+                          .col-md-10
+                            input(type="text", id="inputReviewTitle", name="title", required).form-control
+                        .form-group
+                          label(for="inputRating").col-md-2.control-label Rating:
+                          .col-md-10
+                            input(name="rating", data-min="0", data-max="5", data="0.5").rating.rating-loading
+                        .form-group
+                          label.col-md-2.control-label Message:
+                          .col-md-10
+                            textarea(rows="3", name="message", required).form-control
+                        .form-group
+                          .col-md-12
+                            button(type="submit").btn.btn-success.pull-right Send
+                      hr
+                  .row
+                    .col-md-12
+                      .reviews
+
+      .row.footer
+        .col-md-12
+          .row
+            .col-md-6
+              p Photos Done by #[a(href="https://www.facebook.com/KharlaRosePhotography/") Kharla Rose Photography] #[br] Website designed and developed by #[a(href="https://za.linkedin.com/in/ll931217", target="_blank") Liang-Shih Lin]
+            .col-md-6.text-right
+              div(data-href="https://www.facebook.com/KharlaRosePhotography/", data-layout="button_count", data-show-faces="false").fb-follow
+              p &copy; Copyright 2016 China Restaurant Inc. All Rights Reserved.

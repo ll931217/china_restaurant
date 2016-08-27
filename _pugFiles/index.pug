@@ -1,0 +1,201 @@
+mixin images(name)
+  li
+    img(src= name).img-responsive
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="author", content="Liang-Shih Lin")
+    meta(name="keywords", content="Kimberley, South Africa, China, Restaurant, Food, Wen-Ching Ho, Du Toit Span Road, Du Toit Span, Du Toit, Chinese, Chinese Food, Chinese Cuisine, Asian Fusion, Chinese, Seafood, Singaporean, Taiwanese, Vegetarian")
+    title China Restaurant
+    base(href="/china_restaurant_2/public/")
+
+    link(rel="shortcut icon", href="images/logo.ico")
+    link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat")
+    link(rel="stylesheet", type="text/css", href="css/bootstrap.css")
+    link(rel="stylesheet", type="text/css", href="css/styles.css")
+    link(rel="stylesheet", type="text/css", href="css/unslider.css")
+
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(type="text/javascript", src="js/unslider.js")
+    script(type="text/javascript", src="js/bootstrap.js")
+    script(type="text/javascript", src="js/openTime.js")
+    script(type="text/javascript").
+      $(document).ready(function() {
+        $('.my-slider').unslider({
+          autoplay: true,
+          keys: false,
+          arrows: false,
+          nav: false,
+          infinite: true
+        });
+
+        if($(window).width() < 990) {
+          $('.main-side').insertAfter('.content');
+        } else {
+          $('.main-side').insertBefore('.content');
+        }
+      });
+
+      $(window).on('resize', function() {
+        if($(window).width() < 990) {
+          $('.main-side').insertAfter('.content');
+        } else {
+          $('.main-side').insertBefore('.content');
+        }
+      });
+  body
+    #fb-root
+    script(type="text/javascript").
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button(type="button", data-toggle="collapse", data-target="#navbar-links", aria-expanded="false").navbar-toggle.collapsed
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href="#").navbar-brand
+            img(src="images/logo.png", alt="China Restaurant Logo")
+
+        .collapse.navbar-collapse#navbar-links
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href="#") #[span.glyphicon.glyphicon-home] Home
+            li
+              a(href="gallery") Gallery
+            li
+              a(href="reviews") Reviews
+            li
+              a(href="about") About Us
+            li
+              a(href="contact") Contact Us
+    .container-fluid
+      .row.main-body
+        .col-md-3.main-side
+          .outer
+            .inner
+              h3 #[span(aria-hidden="true").glyphicon.glyphicon-fire] New Dish!
+              br
+              .zoomTarget
+                img(src="images/gallery/16.jpg", alt="Deep Fried Chicken Steak").img-responsive
+              br
+
+            .inner
+              h3 #[span.glyphicon.glyphicon-list-alt] Menus
+              p
+                a(href="pdf/mainMenu.pdf", target="_blank") Main Menu
+                p -- All the delicious food you find on the take-out menu will be here in the main menu
+                a(href="pdf/setMenu.pdf", target="_blank") Set Menu
+                p -- Want to come here with your friends, family or with someone special? *wink* *wink*. Take a look at this menu
+                a(href="pdf/drinks.pdf", target="_blank") Drinks
+                p -- Feeling thirsty or want to try some eastern alcohol? This is the menu for you!
+        .col-md-6.content
+          .row
+            .col-md-12
+              .outer
+                .inner
+                  span#open
+                  script(type="text/javascript").
+                    window.onload = open('open');
+          .row
+            .col-md-12
+              .outer
+                .slide.inner
+                  .my-slider
+                    ul
+                      +images("images/home/DSC_1_1.jpg")
+                      +images("images/home/DSC_1_2.jpg")
+                      +images("images/home/DSC_1_3.jpg")
+                      +images("images/home/DSC_1_4.jpg")
+                      +images("images/home/DSC_1_5.jpg")
+                      +images("images/home/DSC_1_6.jpg")
+                      +images("images/home/DSC_1_7.jpg")
+                      +images("images/home/DSC_1_8.jpg")
+                      +images("images/home/DSC_1_9.jpg")
+                      +images("images/home/DSC_1_10.jpg")
+                      +images("images/home/DSC_1_12.jpg")
+                      +images("images/home/DSC_1_13.jpg")
+                      +images("images/home/DSC_1_14.jpg")
+                      +images("images/home/DSC_1_15.jpg")
+                      +images("images/home/DSC_1_16.jpg")
+                      +images("images/home/DSC_1_17.jpg")
+                      +images("images/home/DSC_1_18.jpg")
+                      +images("images/home/DSC_1_19.jpg")
+                      +images("images/home/DSC_1_20.jpg")
+                      +images("images/home/DSC_1_21.jpg")
+                      +images("images/home/DSC_1_22.jpg")
+                      +images("images/home/DSC_1_23.jpg")
+                      +images("images/home/DSC_1_25.jpg")
+          .row
+            .col-md-6.home-about
+              .outer
+                .inner
+                  h1 A Little About Us
+                  p China Restaurant was established in 1994, after Wen-Ching Ho (The owner of the restaurant) closed down a gadget shop that he used to run. China Restaurant was the only Asian restaurant in Kimberley until 2014 when more Asians moved to Kimberley and opened up more restaurants. The restaurant only sells traditional Asian food, with recipe that are taken from Taiwan. The restaurant is run by...
+                  a(href="china_restaurant_2/public/about") Read More
+            .col-md-6.home-comments
+              .outer
+                .inner
+                  h1 Some Comments from Our Customers
+                  blockquote
+                    p I've moved to Bloemfontein & went eating Chinese and nobody there beat you guys! Went there on Thursday night again!
+                    footer Melissa du Plessis
+        .col-md-3.other-side
+          .outer
+            .inner
+              h3 #[span.glyphicon.glyphicon-time] Operating Hours
+              p
+                span.operate Mondays - Saturdays:
+                p 11:30 - 14:00
+                p 17:30 - 21:30
+              hr(align="center")
+              p
+                span.operate Sundays:
+                p
+                  span(style="color: red") CLOSED
+
+            .inner
+              h3 #[span.glyphicon.glyphicon-earphone] How to get hold of us
+              p
+                span.operate Mr Delivery
+                br
+                a(href="tel:0861858591", style="font-size: 14px") (086) 185-8591
+                br
+                | Tel:
+                a(href="tel:0538314444", style="font-size: 14px") (053) 831-4444
+                br
+                | Cell:
+                a(href="tel:0027826719787", style="font-size: 14px") + (27) 826719787
+                br
+                | Location:
+                br
+                br
+                iframe(allowfullscreen="", frameborder="0", height="300", src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.1995800991526!2d24.768632115717597!3d-28.74345757894708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9b1bafab1ce9dd%3A0xe18a37d07e8d1ebb!2s147+Du+Toitspan+Rd%2C+Kimberley%2C+8301!5e0!3m2!1sen!2sza!4v1460017968018", style="border: 0").maps
+                br
+
+            .inner
+              div(data-adapt-container-width="true", data-hide-cover="false", data-href="https://www.facebook.com/chinarestaurantkby/", data-show-facepile="true", data-small-header="true", data-tabs="timeline", data-width="400").fb-page
+                .fb-xfbml-parse-ignore
+                  blockquote(cite="https://www.facebook.com/chinarestaurantkby/")
+                    a(href="https://www.facebook.com/chinarestaurantkby/", target="_blank") China Restaurant Kimberley
+      .row.footer
+        .col-md-12
+          .row
+            .col-md-6
+              p Photos Done by #[a(href="https://www.facebook.com/KharlaRosePhotography/") Kharla Rose Photography] #[br] Website designed and developed by #[a(href="https://za.linkedin.com/in/ll931217", target="_blank") Liang-Shih Lin]
+            .col-md-6.text-right
+              div(data-href="https://www.facebook.com/KharlaRosePhotography/", data-layout="button_count", data-show-faces="false").fb-follow
+              p &copy; Copyright 2016 China Restaurant Inc. All Rights Reserved.

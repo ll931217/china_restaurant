@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Liang-Shih Lin">
+  <meta name="keywords" content="Kimberley, South Africa, China, Restaurant, Food, Wen-Ching Ho, Du Toit Span Road, Du Toit Span, Du Toit, Chinese, Chinese Food, Chinese Cuisine, Asian Fusion, Chinese, Seafood, Singaporean, Taiwanese, Vegetarian">
+  <title>China Restaurant</title>
+  <base href="/china_restaurant_2/public/">
+  <link rel="shortcut icon" href="images/logo.ico">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script type="text/javascript">
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="China Restaurant Logo">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Home</a>
+          </li>
+          <li><a href="gallery">Gallery</a>
+          </li>
+          <li><a href="reviews">Reviews</a>
+          </li>
+          <li><a href="about">About Us</a>
+          </li>
+          <li class="active"><a href="contact/#"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row main-body">
+      <div class="col-md-offset-3 col-md-6 content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="outer">
+              <div class="inner">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>Talk to Us!</h1>
+                    <hr>
+                    <form class="form-horizontal" method="post" action="controls/send.php">
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="inputFName">Name:</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="text" id="inputFName" name="fname" placeholder="Jack" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="inputLName">Surname:</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="text" id="inputLName" name="lname" placeholder="Sparrow" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="inputEmail">Email:</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="text" id="inputEmail" name="email" placeholder="jack.sparrow123@gmail.com" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="inputMessage">Message:</label>
+                        <div class="col-md-9">
+                          <textarea class="form-control" rows="4" name="message" placeholder="What would you like to tell us? Suggestions and complaints are welcome" required></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-12">
+                          <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Photos Done by <a href="https://www.facebook.com/KharlaRosePhotography/">Kharla Rose Photography</a> 
+              <br>Website designed and developed by <a href="https://za.linkedin.com/in/ll931217" target="_blank">Liang-Shih Lin</a>
+            </p>
+          </div>
+          <div class="col-md-6 text-right">
+            <div class="fb-follow" data-href="https://www.facebook.com/KharlaRosePhotography/" data-layout="button_count" data-show-faces="false"></div>
+            <p>&copy; Copyright 2016 China Restaurant Inc. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

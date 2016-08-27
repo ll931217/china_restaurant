@@ -1,0 +1,105 @@
+mixin images(...names)
+  each name in names
+    .item
+      img(src= name).img-responsive
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="author", content="Liang-Shih Lin")
+    meta(name="keywords", content="Kimberley, South Africa, China, Restaurant, Food, Wen-Ching Ho, Du Toit Span Road, Du Toit Span, Du Toit, Chinese, Chinese Food, Chinese Cuisine, Asian Fusion, Chinese, Seafood, Singaporean, Taiwanese, Vegetarian")
+    title China Restaurant
+    base(href="/china_restaurant_2/public/")
+
+    link(rel="shortcut icon", href="images/logo.ico")
+    link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat")
+    link(rel="stylesheet", type="text/css", href="css/bootstrap.css")
+    link(rel="stylesheet", type="text/css", href="css/styles.css")
+
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(type="text/javascript", src="js/unslider.js")
+    script(type="text/javascript", src="js/bootstrap.js")
+  body
+    #fb-root
+    script(type="text/javascript").
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button(type="button", data-toggle="collapse", data-target="#navbar-links", aria-expanded="false").navbar-toggle.collapsed
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href="#").navbar-brand
+            img(src="images/logo.png", alt="China Restaurant Logo")
+
+        .collapse.navbar-collapse#navbar-links
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="") Home
+            li.active
+              a(href="gallery/#") #[span.glyphicon.glyphicon-picture] Gallery
+            li
+              a(href="reviews") Reviews
+            li
+              a(href="about") About Us
+            li
+              a(href="contact") Contact Us
+    .container-fluid
+      .row.main-body
+        .col-md-offset-2.col-md-8.content
+          .row
+            .col-md-12
+              .outer
+                .inner
+                  div(data-ride="carousel").carousel.slide#foodGallery
+                    ol.carousel-indicators
+                      li(data-target="#foodGallery", data-slide-to="0").active
+                      li(data-target="#foodGallery", data-slide-to="1")
+                      li(data-target="#foodGallery", data-slide-to="2")
+                      li(data-target="#foodGallery", data-slide-to="3")
+                      li(data-target="#foodGallery", data-slide-to="4")
+                      li(data-target="#foodGallery", data-slide-to="5")
+                      li(data-target="#foodGallery", data-slide-to="6")
+                      li(data-target="#foodGallery", data-slide-to="7")
+                      li(data-target="#foodGallery", data-slide-to="8")
+                      li(data-target="#foodGallery", data-slide-to="9")
+                      li(data-target="#foodGallery", data-slide-to="10")
+                      li(data-target="#foodGallery", data-slide-to="11")
+                      li(data-target="#foodGallery", data-slide-to="12")
+                      li(data-target="#foodGallery", data-slide-to="13")
+                      li(data-target="#foodGallery", data-slide-to="14")
+                      li(data-target="#foodGallery", data-slide-to="15")
+                      li(data-target="#foodGallery", data-slide-to="16")
+
+                    div(role="listbox").carousel-inner
+                      .item.active
+                        img(src="images/gallery/1.jpg").img-responsive
+                      +images("images/gallery/2.jpg", "images/gallery/3.jpg", "images/gallery/4.jpg", "images/gallery/5.jpg", "images/gallery/6.jpg", "images/gallery/7.jpg", "images/gallery/8.jpg", "images/gallery/9.jpg", "images/gallery/10.jpg", "images/gallery/11.jpg", "images/gallery/12.jpg", "images/gallery/13.jpg", "images/gallery/14.jpg", "images/gallery/15.jpg", "images/gallery/16.jpg", "images/gallery/17.jpg")
+
+                    a(href="#foodGallery", role="button", data-slide="prev").left.carousel-control
+                      span(aria-hidden="true").glyphicon.glyphicon-chevron-left
+                      span.sr-only Previous
+                    a(href="#foodGallery", role="button", data-slide="next").right.carousel-control
+                      span(aria-hidden="true").glyphicon.glyphicon-chevron-right
+                      span.sr-only Next
+      .row.footer
+        .col-md-12
+          .row
+            .col-md-6
+              p Photos Done by #[a(href="https://www.facebook.com/KharlaRosePhotography/") Kharla Rose Photography] #[br] Website designed and developed by #[a(href="https://za.linkedin.com/in/ll931217", target="_blank") Liang-Shih Lin]
+            .col-md-6.text-right
+              div(data-href="https://www.facebook.com/KharlaRosePhotography/", data-layout="button_count", data-show-faces="false").fb-follow
+              p &copy; Copyright 2016 China Restaurant Inc. All Rights Reserved.
