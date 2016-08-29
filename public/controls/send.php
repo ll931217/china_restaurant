@@ -72,12 +72,10 @@
      echo 'Message could not be sent.';
      echo 'Mailer Error: ' . $mail->ErrorInfo;
      $_SESSION["status"] = $mail->ErrorInfo;
-     header("location: status.php");
+     header("location: /china_restaurant_2/public");
      exit;
   }
 
   echo 'Message has been sent';
-
-  $_SESSION["status"] = $opt;
-  header("location: status.php");
+  header("location: /china_restaurant_2/public");
 ?>
