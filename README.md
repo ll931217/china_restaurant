@@ -1,6 +1,6 @@
 # China Restaurant Kimberley Website
 
-A website created for my uncle's restaurant in Kimberley for a project in my final year of my Bachelor's degree.
+A static website created for my uncle's restaurant in Kimberley for a project in my final year of my Bachelor's degree.
 
 ## Installation
 
@@ -14,7 +14,7 @@ I used `gulp-sass`, `gulp-pug`, `gulp`, `gulp-autoprefixer`, `gulp-clean-css`, a
 
 ## Usage
 
-In the root directory of the project, run the following command: 
+In the root directory of the project, run the following command:
 
     gulp
 
