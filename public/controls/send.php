@@ -57,7 +57,7 @@
   $mail->Host = 'smtp.gmail.com';
   $mail->SMTPAuth = true;
   $mail->Username = 'kbycres@gmail.com';
-  $mail->Password = 'll931217';
+  $mail->Password = '';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
   $mail->setFrom($email, $name);
