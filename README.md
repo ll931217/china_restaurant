@@ -2,6 +2,8 @@
 
 A website created for my uncle's restaurant in Kimberley for a project in my final year of my Bachelor's degree.
 
+Unfortunately the owner of the site doesn't want the site anymore so you won't be able to access it, however you can download these source files and run it on your computer.
+
 ## Installation
 
 First clone the repo to your machine, then run the following command in your terminal in the project's directory
